@@ -9,6 +9,8 @@ import { Checkout } from './component/Checkout';
 import { products } from './data/products';
 import { useStore } from './store/useStore';
 import { Package } from 'lucide-react';
+import Footer from './component/Footer';
+
 
 export function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -98,6 +100,7 @@ export function App() {
       {selectedProduct && (
         <ProductDetail product={selectedProduct} onClose={() => setSelectedProduct(null)} />
       )}
+ <Footer />
     </div>
   );
   }
